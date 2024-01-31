@@ -1,9 +1,86 @@
 @charset "UTF-8";
 
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+:root{
+    --corPrincipal: #3783e0;
+    --corSecundaria: #011B3A;
+    --corTerciaria: #FFA400;
+    --corP: rgb(0, 0, 0);
+    font-family: 'Nunito';
+}
+
 *{
     margin: 0px 0px 0px 0px;
 }
 
+/*cabeçalho*/
+header{
+    display: flex;
+    align-items: end;
+    justify-content: space-around;
+}
+
+nav{
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    font-size: 18px;
+    flex-grow: 1;
+}
+
+nav > a{
+    text-decoration: none;
+    color: black;
+    width: 100%;
+    border-bottom: 3px solid transparent;
+}
+
+a:hover{
+    border-bottom: 3px solid var(--corPrincipal);
+    color: var(--corPrincipal);
+}
+
+.selectedPage{
+    border-bottom: 3px solid var(--corPrincipal);
+    color: var(--corPrincipal);
+}
+
+/*rodapé*/
 footer{
-    background-color: #011B3A;
+    margin-top: 15px;
+    background-color: var(--corSecundaria);
+    display: flex;
+    align-items: center;
+    color: white;
+    justify-content: space-around;    
+}
+
+footer > img {
+    height: 50px;
+    margin-left: 1px;
+    margin-top:10px;
+}
+
+#contato{
+    margin: auto;
+
+}
+
+#integracao{
+    margin-right: 15px;
+    display: flex;
+    column-gap: 8px;
+}
+#whatsapp, #email {
+    width: 20px;
+    height: 20px;
+}
+
+#whatsapp {
+    background-color: green;
+}
+
+#email{
+    background-color: red;
 }
