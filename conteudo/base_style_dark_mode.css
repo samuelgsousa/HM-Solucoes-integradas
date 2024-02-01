@@ -6,19 +6,23 @@
     --corPrincipal: #3783e0;
     --corSecundaria: #011B3A;
     --corTerciaria: #FFA400;
-    --corP: rgb(0, 0, 0);
+    --corFundo: #1f1f1f;
     --fonteSecundária: white;
     font-family: 'Nunito';
 }
 
 *{
     margin: 0px 0px 0px 0px;
+    
 }
 
 a{
     cursor: pointer;
 }
 
+body{
+    background-color: var(--corFundo);
+}
 /*cabeçalho*/
 header{
     display: flex;
@@ -36,7 +40,7 @@ nav{
 
 nav > a{
     text-decoration: none;
-    color: var(--corP);
+    color: var(--corTerciaria);
     width: 100%;
     border-bottom: 3px solid transparent;
 }

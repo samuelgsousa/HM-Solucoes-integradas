@@ -3,23 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="base_style.css">
-    <title>Página inicial</title>
+    <link rel="stylesheet" href="base_style.css" id="base">
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <title>inicio</title>
 </head>
 <body>
     <header>
         <img src="../logo/hm_small.png" alt="logo">
         <nav>
-            <a href="#" class="selectedPage">início</a> <!--usar javascript para detectar qual página está aberta no momento-->
-            <a href="#">sobre</a>
-            <a href="#">orçamento</a>
-            <a href="#">parceiros</a>
+            <a href="#" id="inicio">início</a> <!--usar javascript para detectar qual página está aberta no momento-->
+            <a href="#" id="sobre">sobre</a>
+            <a href="#" id="orcamento">orçamento</a>
+            <a href="#" id="parceiros">parceiros</a>
         </nav>
     </header>
 
     <main>
-
        
+
     </main>
     
     <footer>
@@ -33,10 +34,12 @@
         
 <div id="integracao">
     
-            <div id="whatsapp"></div>
-            <div id="email"></div>
+    <a href="https://wa.me/5511941080881/?text=Olá equipe da HM! Tenho interesse nos serviços que vocês oferecem. Poderiam fornecer mais informações? " target="_blank"> <img src="../icons/icons-whatsapp.png" alt="Contato Whatsapp" id="whatsapp"> </a>
+    <a href="mailto:seu@email.com?subject=Dúvidas%20sobre%20os%20serviços"><img src="../icons/icons-email.png" alt="email" id="email"></a>
     
 </div>
+
+    <script src="base_script.js"></script>
     </footer>
 </body>
 </html>
