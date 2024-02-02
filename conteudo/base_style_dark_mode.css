@@ -22,21 +22,104 @@ a{
 
 body{
     background-color: var(--corFundo);
+    overflow: auto;
 }
 /*cabeçalho*/
-header{
+/*alinhamento com mais de 600px em flexbox*/
+.header_desktop{
     display: flex;
     align-items: end;
     justify-content: space-around;
 }
 
-nav{
+.nav_desktop{
     display: flex;
     justify-content: space-around;
     text-align: center;
     font-size: 18px;
     flex-grow: 1;
 }
+/*fim do alinhamento com mais de 600px em flexbox*/
+
+/*alinhamento com menos de 600px de tela*/
+.header_mobile{
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+}
+
+.nav_mobile{
+    display: flex; 
+    visibility: hidden;
+    position: absolute;
+    width: 100%;
+    top:60px;
+    flex-direction: column;
+    text-align: left;
+    font-size: 18px;
+    background-color: var(--corFundo);
+    height: 0px;
+    transition: .6s;
+    overflow-y: auto;
+} 
+
+.nav_mobile > a{
+    color: var(--fonteSecundária);
+    border-bottom: transparent;
+}
+
+.nav_mobile > a:hover{
+    border-bottom: transparent;
+    background-color: #46464642;
+    color: var(--fonteSecundária);
+}
+
+
+#btn-mobile{
+    display: none;
+    padding: .5rem 1rem;
+    font-size: 1rem;
+    border: none;
+    background: none;
+    cursor: pointer;
+    color: var(--fonteSecundária);
+}
+
+#hamburger{
+    border-top: 2px solid;
+    width: 20px;
+}
+
+#hamburger::after, #hamburger::before{
+    content: '';
+    display: block;
+    width: 20px;
+    height: 2px;
+    background-color: currentColor;
+    margin-top: 5px;
+    transition: .3s;
+    position: relative;
+}
+
+nav.active{ /*quando nav receber a classe active em jQuery o display será flex*/
+    height: 100vh;
+    visibility: visible;
+}
+
+#hamburger.active{ /*hamburger também recebe a classe active em jQuery*/
+    border-top-color: transparent;
+}
+
+#hamburger.active::before{
+    transform: rotate(135deg);
+}
+
+#hamburger.active::after{
+    transform: rotate(-135deg);
+    top: -7px;
+}
+
+/*fim do alinhamento com menos de 600px de tela*/
 
 nav > a{
     text-decoration: none;
@@ -85,4 +168,3 @@ footer > img {
     width: 35px;
     height: 35px;
 }
-
