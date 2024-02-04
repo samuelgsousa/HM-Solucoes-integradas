@@ -6,4 +6,7 @@ deixar o site semântico
 
 AUMENTAR A QUALIDADE DA LOGO BRANCA
 
-JAVASCRIPT TAG PARA QUANDO O MOUSE PASSAR POR CIMA DE UM DOS LINKS DO MENU, A PÁGINA QUE ESTÁ SELECIONADA FIQUE DESELECIONADA
+refinar o código
+adicionar em css uma propriedade para que ao reduzir a tela, em determinado momento pare. Funciona apenas para desktop, não funciona no mobile
+
+fazer pelo menos alguma página (tentar o carrossel)

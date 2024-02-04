@@ -23,6 +23,7 @@ a{
 body{
     background-color: var(--corFundo);
     overflow: auto;
+    min-width: 300px;
 }
 /*cabeçalho*/
 /*alinhamento com mais de 600px em flexbox*/
