@@ -3,43 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="base_style.css">
-    <title>Página inicial</title>
+    <link rel="stylesheet" href="base_style.css" id="base">
+    <link rel="stylesheet" href="index_style.css" id="base">
+
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <title>inicio</title>
 </head>
 <body>
-    <header>
-        <img src="../logo/hm_small.png" alt="logo">
-        <nav>
-            <!--copiar conteudo, apagar tudo e usar a outra base-->
-            <a href="#">início</a> <!--usar javascript para detectar qual página está aberta no momento-->
-            <a href="#">sobre</a>
-            <a href="#">orçamento</a>
-            <a href="#">parceiros</a>
-        </nav>
-    </header>
-
+    
     <main>
-        <div id="carrossel">
-            <img src="#" alt="carrossel">
-            <h1>Lorem Ipsum</h1>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
-            <button>Nossos serviços</button>
-           </div>
-       
+       <div class="slider">
+        <div class="slides">
+            
+        
+        <input type="radio" name="radio-btn" id="radio1">
+        <input type="radio" name="radio-btn" id="radio2">
+        <input type="radio" name="radio-btn" id="radio3">
+        <input type="radio" name="radio-btn" id="radio4">
+        <!--fim dos radio-->
+        <!--slide imagens  -->
+        <div class="slide first">
+            <img src="https://img.freepik.com/fotos-gratis/homens-trabalhando-no-corte-de-placa-de-mdf_23-2149384798.jpg?w=1380&t=st=1707078632~exp=1707079232~hmac=34b832e3da548319463fb4ced5ae46e0b96903c5b1506cd99e77f30f91a9b2f7" alt="Imagem 1">
+        </div>
+
+        <div class="slide">
+            <img src="https://img.freepik.com/fotos-gratis/pessoas-de-tiro-medio-usando-capacetes-no-trabalho_23-2149366667.jpg?w=1380&t=st=1707078936~exp=1707079536~hmac=9d4dbb902bfa34273b8678ed355ef9db0595e8e0f51fc43ebeeca5b4bec3a99e" alt="Imagem 2">
+        </div>
+
+        <div class="slide">
+            <img src="https://img.freepik.com/fotos-gratis/trabalhador-afro-americano-varrendo-detritos-soltos-acumulados-ao-redor-da-base-do-ar-condicionado-engenheiro-treinado-para-limpeza-do-corpo-do-sistema-hvac-e-painel-de-controle-com-ferramenta-de-escova-para-remover-sujeira-solta_482257-70162.jpg?w=1380&t=st=1707079671~exp=1707080271~hmac=0f9c6daa7d39f65eded9ac10672b890ce85b50ec5e4091a5da68c4263fcd60ab" alt="Imagem 3">
+        </div>
+
+        <div class="slide">
+            <img src="https://img.freepik.com/fotos-gratis/um-eletricista-masculino-trabalha-em-um-quadro-de-distribuicao-com-um-cabo-de-conexao-eletrico_169016-1472.jpg?w=1380&t=st=1707080078~exp=1707080678~hmac=074e8e61624999ee4ed1238f3aa0438de25c081cfd4f67f5adb0a070ee6bc068" alt="Imagem 4">
+
+        </div>
+        <!-- fim slide imagens  -->
+        <!-- navigation auto -->
+        <div class="navigation-auto">
+        <div class="auto-btn1"></div>
+        <div class="auto-btn2"></div>
+        <div class="auto-btn3"></div>
+        <div class="auto-btn4"></div>
+    </div>
+        </div>
+
+        <div class="manual-navigation">
+            <label for="radio1" class="manual-btn"></label>
+            <label for="radio2" class="manual-btn"></label>
+            <label for="radio3" class="manual-btn"></label>
+            <label for="radio4" class="manual-btn"></label>
+        </div>
+       </div>
     </main>
     
-    <footer>
-        <img src="../logo/hm_white.png" alt="logo">
-        <span class="contato"> 
-            (Telefone)
-            (email@email.com)
-            (endereço)
-        </span>
-
-        <div id="integracao">
-            <div id="whatsapp"></div>
-            <div id="email"></div>
-        </div>
-    </footer>
+    <script src="base_script.js"></script>
+    <script src="index_script.js"></script>
 </body>
 </html>

@@ -10,3 +10,35 @@ refinar o código
 adicionar em css uma propriedade para que ao reduzir a tela, em determinado momento pare. Funciona apenas para desktop, não funciona no mobile
 
 fazer pelo menos alguma página (tentar o carrossel)
+
+Instalação e manutenção de ar condicionado
+Elétrica
+Hidráulica
+Telhados
+Alvenaria
+Pintura
+Controle de acesso
+Câmeras
+
+
+
+const imgs = document.querySelector('div#img')
+const img = document.querySelectorAll("#img img")
+
+let idx = 0
+
+function carrossel(){
+    idx++
+    if(idx > img.length - 1) idx = 0
+    
+    $('.container > img').eq(idx).show()
+
+    imgs.style.transform = `translateX(${-idx * $('.container').width()})`
+
+    $('.container > img').eq(idx - 1).hide();
+
+}
+
+//setInterval(carrossel, 1800)
+
+da pra usar o resize com 
