@@ -1,24 +1,45 @@
 main{
     margin: 0;
+    margin-top: 15px;
     padding: 0;
     width: 100%;
-    height: 100vh;
+    height: 80vh;
     display: flex;
     justify-content: center;
-    align-items: center;}
+    align-items: center;
+    
+}
 
+/*position relative pode ajudar a deixar o texto acima da imagem*/
+
+.container{
+    position: relative;
+    margin-top: 100px;
+    height: 100%;
+    width: 100%;
+    display: flex;
+}
+ h1{
+    color: white;
+    margin-top: 500px;
+    text-align: center;
+ }
     .slider{
         margin: 0 auto;
         width: 100%;
         height: 80vh;
         min-height: 400px;
         overflow: hidden;
+        position: absolute;
+        
+        
     }
 
     .slides{
         width: 400%;
         height: 400px;
         display: flex;
+        
     }
 
     .slides input{
@@ -28,14 +49,28 @@ main{
     .slide{ /*é cada item*/
         width: 25%;
         position: relative;
-        transition: 2s;
+        transition: 2s;/*é esse aqui*/
+        padding: 0px;
         
     }
 
     .slide img{
         width: 100%;
-        object-fit: contain;
+        object-fit: cover;
         }
+    
+    #img2 {
+        margin-top: -3%;
+    }
+
+    #img3{
+        margin-top: -2%;
+    }
+
+    #img4{
+        margin-top: -2%;
+            } 
+    /*800px*/
 
     .manual-navigation{
         position: absolute;
@@ -80,7 +115,6 @@ main{
     }
 
     .navigation-auto div{
-        border: 2px solid #20a6ff;
         padding: 5px;
         border-radius: 10px;
         cursor: pointer;

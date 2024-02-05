@@ -22,7 +22,6 @@ a{
 
 body{
     background-color: var(--corFundo);
-    overflow: auto;
     min-width: 300px;
 }
 /*cabeçalho*/
@@ -141,12 +140,18 @@ nav > a:hover{
 
 /*rodapé*/
 footer{
-    margin-top: 15px;
     background-color: var(--corSecundaria);
     display: flex;
     align-items: center;
     color: var(--fonteSecundária);
-    justify-content: space-around;    
+    justify-content: space-around;   
+}
+.body-content:after {
+    content: "";
+    display: block;
+  }
+.site-footer, .page-wrap:after{
+    height: 60px;
 }
 
 footer > img {

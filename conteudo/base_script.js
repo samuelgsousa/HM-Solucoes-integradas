@@ -52,6 +52,7 @@ fetch("head.html")
 /*adicionando rodapé*/
 
 const r = document.createElement('footer')
+r.setAttribute("class", "site.footer")
 
 fetch("foot.html")
 .then(res => res.text())
