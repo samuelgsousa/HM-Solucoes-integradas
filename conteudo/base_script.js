@@ -1,4 +1,9 @@
 
+let tema = window.matchMedia('(prefers-color-scheme: dark)').matches ?  $('#base').attr("href", "base_style_dark_mode.css") : $('#base').attr("href", "base_style.css") //essa função detecta se o usuário utiliza o modo escuro, caso positivo o estilo base da página mudará. Se não, ele irá inicidar com o estilo base padrão, apenas para garantir que não ocorram erros
+
+
+
+
 function toggleMenu(event){
     if(event.type === 'touchstart') event.preventDefault() /*essa linha serve para previnir o evento click de ocorrer caso o touchstart ocorra, pois o touchstart gera um click com atraso de alguns milisegundos*/
     const nav = document.querySelector('nav')
@@ -28,11 +33,11 @@ function redimensionar(){
     
 
 }
-window.setupEventListeners = function (){
+window.setupEventListeners = () => {
 
-    let btnMobile = document.querySelector('button#btn-mobile')
-    btnMobile.addEventListener('click', toggleMenu)
-    btnMobile.addEventListener('touchstart', toggleMenu)
+    let btnMobile = document.querySelector('button#btn-mobile');
+    btnMobile.addEventListener('click', toggleMenu);
+    btnMobile.addEventListener('touchstart', toggleMenu);
 }
 
 /*adicionando cabeçalho */
@@ -52,7 +57,6 @@ fetch("head.html")
 /*adicionando rodapé*/
 
 const r = document.createElement('footer')
-r.setAttribute("class", "site.footer")
 
 fetch("foot.html")
 .then(res => res.text())
@@ -60,9 +64,6 @@ fetch("foot.html")
     r.innerHTML = res
     body.append(r)
 } )
-
-let tema = window.matchMedia('(prefers-color-scheme: dark)').matches ?  $('#base').attr("href", "base_style_dark_mode.css") : $('#base').attr("href", "base_style.css") //essa função detecta se o usuário utiliza o modo escuro, caso positivo o estilo base da página mudará. Se não, ele irá inicidar com o estilo base padrão, apenas para garantir que não ocorram erros
-
 
 
 $(document).ready(() => {

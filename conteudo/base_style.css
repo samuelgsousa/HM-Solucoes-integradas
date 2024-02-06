@@ -6,59 +6,157 @@
     --corPrincipal: #3783e0;
     --corSecundaria: #011B3A;
     --corTerciaria: #FFA400;
-    --corP: rgb(0, 0, 0);
-    --fonteSecundária: white;
+    --corFonte: rgb(0, 0, 0);
+    --corFundo: white;
+    --CorfonteSecundária: white;
     font-family: 'Nunito';
 }
 
+p{
+    color: var(--fonteSecundária);
+}
 *{
     margin: 0px 0px 0px 0px;
+    
 }
 
 a{
     cursor: pointer;
 }
 
+header{margin-bottom: 8px;}
+
+body{
+    background-color: var(--corFundo);
+    min-width: 300px;
+}
 /*cabeçalho*/
-header{
+/*alinhamento com mais de 600px em flexbox*/
+.header_desktop{
     display: flex;
     align-items: end;
     justify-content: space-around;
 }
 
-nav{
+.nav_desktop{
     display: flex;
     justify-content: space-around;
     text-align: center;
     font-size: 18px;
     flex-grow: 1;
 }
+/*fim do alinhamento com mais de 600px em flexbox*/
+
+/*alinhamento com menos de 600px de tela*/
+.header_mobile{
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+}
+
+.nav_mobile{
+    display: flex; 
+    visibility: hidden;
+    position: absolute;
+    width: 100%;
+    top:60px;
+    flex-direction: column;
+    text-align: left;
+    font-size: 18px;
+    background-color: var(--corFundo);
+    height: 0px;
+    transition: .6s;
+    overflow-y: auto;
+    z-index: 1000000000;
+} 
+
+.nav_mobile > a{
+    color: var(--fonteSecundária);
+    border-bottom: transparent;
+}
+
+.nav_mobile > a:hover{
+    border-bottom: transparent;
+    background-color: #46464642;
+    color: var(--fonteSecundária);
+}
+
+
+#btn-mobile{
+    display: none;
+    padding: .5rem 1rem;
+    font-size: 1rem;
+    border: none;
+    background: none;
+    cursor: pointer;
+    color: var(--corFonte);
+}
+
+#hamburger{
+    border-top: 2px solid;
+    width: 20px;
+}
+
+#hamburger::after, #hamburger::before{
+    content: '';
+    display: block;
+    width: 20px;
+    height: 2px;
+    background-color: currentColor;
+    margin-top: 5px;
+    transition: .3s;
+    position: relative;
+}
+
+nav.active{ /*quando nav receber a classe active em jQuery o display será flex*/
+    height: 100%;
+    visibility: visible;
+}
+
+#hamburger.active{ /*hamburger também recebe a classe active em jQuery*/
+    border-top-color: transparent;
+}
+
+#hamburger.active::before{
+    transform: rotate(135deg);
+}
+
+#hamburger.active::after{
+    transform: rotate(-135deg);
+    top: -7px;
+}
+
+/*fim do alinhamento com menos de 600px de tela*/
 
 nav > a{
     text-decoration: none;
-    color: var(--corP);
+    color: var(--corTerciaria);
     width: 100%;
     border-bottom: 3px solid transparent;
 }
 
 nav > a:hover{
-    border-bottom: 3px solid var(--corPrincipal);
-    color: var(--corPrincipal);
+    border-bottom: 3px solid var(--corFonte);
+    color: var(--corFonte);
 }
 
 .selectedPage{
-    border-bottom: 3px solid var(--corPrincipal);
-    color: var(--corPrincipal);
+    border-bottom: 3px solid var(--corFonte);
+    color: var(--corFonte);
 }
 
 /*rodapé*/
 footer{
-    margin-top: 15px;
     background-color: var(--corSecundaria);
     display: flex;
     align-items: center;
     color: var(--fonteSecundária);
-    justify-content: space-around;    
+    justify-content: space-around;   
+    margin-top: 15px;
+    position: absolute;
+    bottom: 1;
+    width: 100%;
+    
 }
 
 footer > img {
@@ -66,6 +164,7 @@ footer > img {
     margin-left: 1px;
     margin-top:10px;
 }
+
 
 #contato{
     margin: auto;

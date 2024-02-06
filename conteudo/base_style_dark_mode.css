@@ -7,10 +7,13 @@
     --corSecundaria: #011B3A;
     --corTerciaria: #FFA400;
     --corFundo: #1f1f1f;
-    --fonteSecundária: white;
+    --corFonte: white;
+    --CorfonteSecundária: black;
     font-family: 'Nunito';
 }
-
+p{
+    color: var(--fonteSecundaria);
+}
 *{
     margin: 0px 0px 0px 0px;
     
@@ -19,6 +22,8 @@
 a{
     cursor: pointer;
 }
+
+header{margin-bottom: 8px;}
 
 body{
     background-color: var(--corFundo);
@@ -61,17 +66,18 @@ body{
     height: 0px;
     transition: .6s;
     overflow-y: auto;
+    z-index: 1000000000;
 } 
 
 .nav_mobile > a{
-    color: var(--fonteSecundária);
+    color: var(--corFonte);
     border-bottom: transparent;
 }
 
 .nav_mobile > a:hover{
     border-bottom: transparent;
     background-color: #46464642;
-    color: var(--fonteSecundária);
+    color: var(--CorfonteSecundária);
 }
 
 
@@ -82,7 +88,7 @@ body{
     border: none;
     background: none;
     cursor: pointer;
-    color: var(--fonteSecundária);
+    color: var(--corFonte);
 }
 
 #hamburger{
@@ -102,7 +108,7 @@ body{
 }
 
 nav.active{ /*quando nav receber a classe active em jQuery o display será flex*/
-    height: 100vh;
+    height: 100%;
     visibility: visible;
 }
 
@@ -145,13 +151,10 @@ footer{
     align-items: center;
     color: var(--fonteSecundária);
     justify-content: space-around;   
-}
-.body-content:after {
-    content: "";
-    display: block;
-  }
-.site-footer, .page-wrap:after{
-    height: 60px;
+    margin-top: 15px;
+    position: absolute;
+    bottom: 1;
+    width: 100%;
 }
 
 footer > img {
