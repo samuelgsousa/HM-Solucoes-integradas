@@ -40,7 +40,6 @@ main{
         margin: 0 auto;
         width: 100%;
         height: 80vh;
-        min-height: 400px;
         overflow: hidden;
         position: absolute;
     }
@@ -49,8 +48,8 @@ main{
         margin: 0 auto;
         width: 100%;
         height: 80vh;
-        min-height: 400px;
         margin-bottom: 15px;
+        
     }
 
     .slides{
@@ -60,17 +59,12 @@ main{
         
     }
 
-    .slides input{
-        display: none;
-    }
 
     .slide{ /*é cada item*/
         width: 25%;
         position: relative;
-        transition: 2s;/*é esse aqui*/
+        transition: 2s;
         padding: 0px;
-        
-        
     }
 
     .slide img{
@@ -80,6 +74,7 @@ main{
     
     #img2 {
         margin-top: -3%;
+        
     }
 
     #img3{
@@ -89,83 +84,6 @@ main{
     #img4{
         margin-top: -2%;
             } 
-    /*800px*/
-
-    .manual-navigation{
-        position: absolute;
-        width: 800px;
-        margin-top: -40px;
-        display: flex;
-        justify-content: center;
-    }
-
-    .manual-btn{ 
-        border: 2px solid white;
-        padding: 5px;
-        border-radius: 10px;
-        cursor: pointer;
-        display: none;
-    }
-
-    .manual-btn:not(:last-child){ /*not last child aplica a todos menos o último elemento*/
-        margin-right: 40px;
-
-    }
-
-    .manual-btn:hover{
-        background-color: white;
-        transition: 0.75s;
-
-    }
-
-    #radio1:checked ~ .first{
-        margin-left: 0;
-    }
-
-    #radio2:checked ~ .first{
-        margin-left: -25%;
-    }
-
-    #radio3:checked ~ .first{
-        margin-left: -50%;
-    }
-
-    #radio4:checked ~ .first{
-        margin-left: -75%;
-    }
-
-    .navigation-auto div{
-        padding: 5px;
-        border-radius: 10px;
-        cursor: pointer;
-        transition: 0.75s;
-        display: none;
-    }
-
-    .navigation-auto{
-        position: absolute;
-        width: 800px;
-        margin-top: 360px;
-        display: flex;
-        justify-content: center;
-        display: none;
-    }
-
-    .navigation-auto div:not(:last-child){
-        margin-right: 40px;
-    }
-
-    #radio1:checked ~ .navigation-auto .auto-btn1{
-        background-color: white;
-    }
-
-    #radio2:checked ~ .navigation-auto .auto-btn2{
-        background-color: white;
-    } #radio3:checked ~ .navigation-auto .auto-btn3{
-        background-color: white;
-    } #radio4:checked ~ .navigation-auto .auto-btn4{
-        background-color: white;
-    }
 
     /*fim do carrossel
     agora começa o o que fazemos*/
@@ -194,10 +112,13 @@ main{
     }
 
     .icons{
-        width: 74px;
+        width: 85px;
         height: 164px;
-        background-color: red;
+        background-color: transparent;
         margin: 3px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         
     }
 
