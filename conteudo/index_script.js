@@ -28,8 +28,8 @@ redimCarrossel()
 
  function redimCarrossel(){ //essa função irá ajustar as imagens para que não fique estranhas quando o tamanho do carrossel diminuir
      let windowW = window.innerWidth
-     let disp = document.querySelector(".slider").clientHeight
-        $('.display').css('height', `${disp}px`) //ajustando para a altura da div display ser sempre do mesmo tamanho que o slider
+     let disp = document.querySelector(".slide").clientHeight
+       $('.display').css('height', `${disp}px`) //ajustando para a altura da div display ser sempre do mesmo tamanho que o slider
 
     if(windowW < 900){ //todas as imagens começam a ficar com margem excessiva com menos de 900px, por isso um único if. O transition é para tornar o ajustes mais suaves caso a pessoa diminua a tela
         $('#img2').css('margin-top', `${0}px`)
@@ -43,7 +43,7 @@ redimCarrossel()
         $('#img3').css('margin-top', `${-2}%`)
         $('#img4').css('margin-top', `${-2}%`)
 }
-        
+        //da pra transformar em media query depois
  }
 
  

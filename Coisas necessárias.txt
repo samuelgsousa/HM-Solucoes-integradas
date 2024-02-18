@@ -21,24 +21,4 @@ Controle de acesso
 Câmeras
 
 
-
-const imgs = document.querySelector('div#img')
-const img = document.querySelectorAll("#img img")
-
-let idx = 0
-
-function carrossel(){
-    idx++
-    if(idx > img.length - 1) idx = 0
-    
-    $('.container > img').eq(idx).show()
-
-    imgs.style.transform = `translateX(${-idx * $('.container').width()})`
-
-    $('.container > img').eq(idx - 1).hide();
-
-}
-
-//setInterval(carrossel, 1800)
-
-da pra usar o resize com 
+usar REM e EM para fonte (existe pixel to Em e REm converter)

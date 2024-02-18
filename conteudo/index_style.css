@@ -4,6 +4,7 @@
     /*tomar cuidado com as variáveis de cores por conta dos modos claro e escuro. Pense em usar média Query para isso se for possível*/
 }
 
+
 p{
     color: var(--corFonte);
 }
@@ -36,7 +37,7 @@ main{
     color: var(--corFonte);
     text-align: center;
  }
-    .slider{
+    .slider{ /*não interfere pois está com position abslute*/
         margin: 0 auto;
         width: 100%;
         height: 80vh;
@@ -44,13 +45,14 @@ main{
         position: absolute;
     }
 
-    .display{
+    .display{  /*ta aqui o problema*/
         margin: 0 auto;
         width: 100%;
         height: 80vh;
         margin-bottom: 15px;
         
     }
+    
 
     .slides{
         width: 400%;
@@ -65,6 +67,7 @@ main{
         position: relative;
         transition: 2s;
         padding: 0px;
+        height: 400px;
     }
 
     .slide img{
@@ -94,6 +97,8 @@ main{
         justify-content: space-around;
     }
 
+   
+
     #descricao, #icones{
         margin-top: 15px;
         width: 400px;
@@ -114,7 +119,7 @@ main{
     .icons{
         width: 85px;
         height: 164px;
-        background-color: transparent;
+        background-color: red;
         margin: 3px;
         display: flex;
         flex-direction: column;
@@ -128,9 +133,49 @@ main{
     }
     .icons > label {
         font-size: 12px;
-        flex-shrink: 1;
     }
     #descricao{
         text-align: justify;
     }
    
+    #icones div:last-child{
+        display: none;
+    }
+
+    @media (max-width: 800px){
+        #desc-group{
+            flex-flow: column-reverse;
+        }
+
+        
+    @media (max-width: 600px){ /*com pouco menos de 800px ainda ta bugando*/
+        #descricao{
+            width: 90%;
+        
+           
+        }
+        #icones{
+            width: 90%;
+            gap: 10%;
+            height: 100%;
+            align-content: flex-start;
+            justify-content: center;
+        }
+
+        #icones div:last-child{
+            display: flex;
+            background-color: blue;
+            
+        }
+
+       
+       
+    }
+
+    @media (max-width: 400px){
+        #icones div:last-child{
+            display: none;
+            
+        }
+    }
+}
