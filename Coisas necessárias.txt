@@ -4,7 +4,7 @@ Obras realizadas
 deixar o site semântico
 #FFA400
 
-AUMENTAR A QUALIDADE DA LOGO BRANCA
+-> AUMENTAR A QUALIDADE DA LOGO BRANCA
 
 refinar o código
 adicionar em css uma propriedade para que ao reduzir a tela, em determinado momento pare. Funciona apenas para desktop, não funciona no mobile
@@ -21,4 +21,10 @@ Controle de acesso
 Câmeras
 
 
-usar REM e EM para fonte (existe pixel to Em e REm converter)
+-> usar REM e EM para fonte (existe pixel to Em e REm converter)
+
+-> ****DIMENSÕES IPHONE SE (menor existente): 375 X 667 
+
+-> tornar a div dos ícones mais ajustável em telas maiores, aumentando de tamanho
+
+-> fazer com que os ícones também aumentem e diminuam de tamanho de acordo com a tela

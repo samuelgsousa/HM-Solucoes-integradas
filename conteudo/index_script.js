@@ -4,9 +4,9 @@ let count = 1;
 let sld = 0;
  //depois mudar a referencia, ao invés de usar radio usar as imagens em si
 
-  setInterval(function(){
-      nextImage()
-  }, 5000)
+   setInterval(function(){
+       nextImage()
+   }, 5000)
 
  function nextImage(){
      count++
@@ -28,14 +28,15 @@ redimCarrossel()
 
  function redimCarrossel(){ //essa função irá ajustar as imagens para que não fique estranhas quando o tamanho do carrossel diminuir
      let windowW = window.innerWidth
-     let disp = document.querySelector(".slide").clientHeight
-       $('.display').css('height', `${disp}px`) //ajustando para a altura da div display ser sempre do mesmo tamanho que o slider
+     let disp = document.querySelector(".slider").clientHeight
+        $('#display').css('height', `${disp}px`) //ajustando para a altura da div display ser sempre do mesmo tamanho que o slider
 
-    if(windowW < 900){ //todas as imagens começam a ficar com margem excessiva com menos de 900px, por isso um único if. O transition é para tornar o ajustes mais suaves caso a pessoa diminua a tela
+    if(windowW < 2000){ //todas as imagens começam a ficar com margem excessiva com menos de 900px, por isso um único if. O transition é para tornar o ajustes mais suaves caso a pessoa diminua a tela
         $('#img2').css('margin-top', `${0}px`)
         $('#img3').css('margin-top', `${0}px`)
         $('#img4').css('margin-top', `${0}px`)
-    } else {
+    } else
+     {
         $('#img2').css('transition', '0.5s')
         $('#img3').css('transition', '0.5s')
 
