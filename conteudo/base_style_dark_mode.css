@@ -27,7 +27,6 @@ header{margin-bottom: 8px;}
 
 body{
     background-color: var(--corFundo);
-    min-width: 300px;
 }
 /*cabeçalho*/
 /*alinhamento com mais de 600px em flexbox*/
@@ -157,15 +156,19 @@ footer{
     width: 100%;
 }
 
+
+
 footer > img {
-    height: 50px;
+    max-height: 50px;
     margin-left: 1px;
     margin-top:10px;
+    
 }
 
 #contato{
     margin: auto;
-
+    font-size: 0.9em;
+    font-weight: 600;
 }
 
 #integracao{
@@ -174,6 +177,17 @@ footer > img {
     column-gap: 8px;
 }
 #whatsapp, #email {
-    width: 35px;
-    height: 35px;
+    max-width: 35px;
+    max-height: 35px;
+}
+
+@media (max-width: 400px){
+    footer{
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+    #integracao{
+        margin-right: 0px;
+        margin-top: 10px;
+    }
 }

@@ -31,20 +31,18 @@ redimCarrossel()
      let disp = document.querySelector(".slider").clientHeight
         $('#display').css('height', `${disp}px`) //ajustando para a altura da div display ser sempre do mesmo tamanho que o slider
 
-    if(windowW < 2000){ //todas as imagens começam a ficar com margem excessiva com menos de 900px, por isso um único if. O transition é para tornar o ajustes mais suaves caso a pessoa diminua a tela
+    if(windowW < 2300){ //todas as imagens começam a ficar com margem excessiva com menos de 900px, por isso um único if. O transition é para tornar o ajustes mais suaves caso a pessoa diminua a tela
         $('#img2').css('margin-top', `${0}px`)
         $('#img3').css('margin-top', `${0}px`)
         $('#img4').css('margin-top', `${0}px`)
-    } else
-     {
+    }else {
         $('#img2').css('transition', '0.5s')
         $('#img3').css('transition', '0.5s')
 
         $('#img2').css('margin-top', `${-3}%`)
         $('#img3').css('margin-top', `${-2}%`)
         $('#img4').css('margin-top', `${-2}%`)
-}
-        //da pra transformar em media query depois
+      }
  }
 
  

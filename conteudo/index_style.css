@@ -118,7 +118,6 @@ main{
     .icons{
         width: 85px;
         height: 164px;
-        background-color: red;
         margin: 3px;
         display: flex;
         flex-direction: column;
@@ -147,30 +146,28 @@ main{
         }
         #descricao{
             width: 90%;
+            box-sizing: content-box;
         }
         .slider{
             height: 60%;
         }
 
-        
-    @media (max-width: 600px){ /*com pouco menos de 800px ainda ta bugando*/
-        
         #icones{
             width: 90%;
             gap: 10%;
             height: 100%;
-            align-content: flex-start;
+            align-content: space-between;
             justify-content: center;
         }
+        
+    @media (max-width: 600px){ /*com pouco menos de 800px ainda ta bugando*/
 
         #icones div:last-child{
             display: flex;
-            background-color: blue;
-            
         }
 
         .slider{
-            height: 40%;
+            height: 50%;
         }
 
        
@@ -186,7 +183,7 @@ main{
             width: 90%;
             gap: 10%;
             height: 100%;
-            align-content: flex-start;
+            align-content: space-between;
             justify-content: space-around;
         }
     }

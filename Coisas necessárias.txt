@@ -28,3 +28,5 @@ Câmeras
 -> tornar a div dos ícones mais ajustável em telas maiores, aumentando de tamanho
 
 -> fazer com que os ícones também aumentem e diminuam de tamanho de acordo com a tela
+
+-> utilizar um único arquivo para estilo e alterar as variáveis de cores pelo Javascript
