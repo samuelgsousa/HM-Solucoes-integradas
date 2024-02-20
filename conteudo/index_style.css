@@ -1,31 +1,3 @@
-/*deixar dessa forma e tentar de algum jeito fazer com que não seja exibido para o usuário a parte vazia da direita do site*/
-:root{
-    --corItens: #6e6e6e;
-    /*tomar cuidado com as variáveis de cores por conta dos modos claro e escuro. Pense em usar média Query para isso se for possível*/
-}
-
-
-p{
-    color: var(--corFonte);
-}
-
-label{
-    color: var(--CorFonteSecundaria)
-}
-
-main{
-    margin: 0;
-    margin-bottom: 15px;
-    padding: 0;
-    width: 100%;
-    min-height: 100vh;
-    display: block;
-    justify-content: center;
-    align-items: center;
-}
-
-/*position relative pode ajudar a deixar o texto acima da imagem*/
-
 .container{
     position: relative;
     margin-top: 100px;
@@ -107,12 +79,12 @@ main{
     }
 
     #icones{
-        background-color: var(--corItens);
+        background-color: var(--BackgroundColorBox);
         display: flex;
         flex-wrap: wrap;
         justify-content: space-around;
         height: 400px;
-
+        padding-top: 50px;
     }
 
     .icons{

@@ -1,7 +1,8 @@
 //script base para o header
 
 
-let tema = window.matchMedia('(prefers-color-scheme: dark)').matches ?  $('#base').attr("href", "base_style_dark_mode.css") : $('#base').attr("href", "base_style.css") //essa função detecta se o usuário utiliza o modo escuro, caso positivo o estilo base da página mudará. Se não, ele irá inicidar com o estilo base padrão, apenas para garantir que não ocorram erros
+let tema = window.matchMedia('(prefers-color-scheme: dark)').matches ? $('html').addClass('dark-mode') : $('html').removeClass('dark-mode')
+// $('#base').attr("class", "base_style_dark_mode.css") : $('#base').attr("href", "base_style.css") //essa função detecta se o usuário utiliza o modo escuro, caso positivo o estilo base da página mudará. Se não, ele irá inicidar com o estilo base padrão, apenas para garantir que não ocorram erros
 
 
 
