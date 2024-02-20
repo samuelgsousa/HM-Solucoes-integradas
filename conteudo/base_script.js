@@ -2,7 +2,7 @@
 
 
 let tema = window.matchMedia('(prefers-color-scheme: dark)').matches ? $('html').addClass('dark-mode') : $('html').removeClass('dark-mode')
-// $('#base').attr("class", "base_style_dark_mode.css") : $('#base').attr("href", "base_style.css") //essa função detecta se o usuário utiliza o modo escuro, caso positivo o estilo base da página mudará. Se não, ele irá inicidar com o estilo base padrão, apenas para garantir que não ocorram erros
+//essa sintaxe detecta se o usuário utiliza o modo escuro, caso positivo o estilo base da página mudará. Se não, ele irá inicidar com o estilo base padrão, apenas para garantir que não ocorram erros
 
 
 
@@ -20,22 +20,6 @@ function toggleMenu(event){
     btn.classList.toggle('active')
 } /*Configurando a função em escopo global para que ela possa ser chamada em setupEventListeners*/
 
-/*function redimensionar(){
-        if($(window).width() <= 600){
-            $('header').removeClass("header_desktop").addClass("header_mobile")
-            $('nav').removeClass("nav_desktop").addClass("nav_mobile")
-            $('#btn-mobile').css('display', 'flex')
-        } else{
-            $('header').removeClass("header_mobile").addClass("header_desktop")
-            $('nav').removeClass("nav_mobile").addClass("nav_desktop")
-            $('#btn-mobile').css('display', 'none')
-            $('#btn-mobile').removeClass("active")
-            $('nav').removeClass("active")
-            $('#hamburger').removeClass("active")
-        }
-    
-
-}*/
 window.setupEventListeners = () => {
 
     let btnMobile = document.querySelector('button#btn-mobile');

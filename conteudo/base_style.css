@@ -4,6 +4,7 @@
 
 :root{
     font-family: 'Nunito';
+    --FooterFontColor: white;
     --corPrincipal: #3783e0;
     --corSecundaria: #011B3A;
     --corTerciaria: #FFA400;
@@ -13,7 +14,9 @@
     --CorfonteSecundária: white;
     --BackgroundColorBox: #3783e0;
 
-    font-size: 62.5%;
+    --AutoColor: var(--corPrincipal); /*Utiliza a cor de destaque do próprio modo*/
+    --ReverseColor: var(--corTerciaria); /*Utiliza a cor destaque do outro modo*/
+    
 }
 
 .dark-mode:root{
@@ -24,7 +27,10 @@
     --corFundo: #1f1f1f;
     --CorfonteSecundária: black;
     --BackgroundColorBox: #ffb01f;
-    
+
+    --AutoColor: var(--corTerciaria); /*Utiliza a cor de destaque do próprio modo*/
+    --ReverseColor: var(--corPrincipal); /*Utiliza a cor destaque do outro modo*/
+
 }
 
 p, h1, h2, h3, h4, h5{
@@ -57,13 +63,14 @@ header{
     justify-content: space-around;
     height: 2em;
     padding-top: 15px;
+    margin-bottom: 2%;
 }
 
 .nav{
     display: flex;
     justify-content: space-around;
     text-align: center;
-    font-size: 1.25em;
+    font-size: 1.2em;
     flex-grow: 1;
 }
 /*fim do alinhamento com mais de 600px em flexbox*/
@@ -160,7 +167,7 @@ header{
 
 nav > a{
     text-decoration: none;
-    color: var(--corTerciaria);
+    color: var(--AutoColor);
     width: 100%;
     border-bottom: 3px solid transparent;
 }
@@ -180,7 +187,6 @@ footer{
     background-color: var(--corSecundaria);
     display: flex;
     align-items: center;
-    color: var(--FooterFontColor);
     justify-content: space-around;   
     margin-top: 15px;
     position: absolute;
@@ -188,7 +194,11 @@ footer{
     width: 100%;
 }
 
+footer p{
+    color: var(--FooterFontColor);
+    font-size: 1rem;
 
+}
 
 footer > img {
     max-height: 50px;
@@ -199,7 +209,7 @@ footer > img {
 
 #contato{
     margin: auto;
-    font-size: 0.9em;
+    font-size: 1rem;
     font-weight: 600;
 }
 

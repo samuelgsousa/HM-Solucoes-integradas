@@ -63,7 +63,8 @@
 
     #desc-group{
         display: flex;
-        justify-content: space-around;
+        justify-content: space-evenly;
+        gap: 1%;
     }   
    
     #descricao, #icones{
@@ -75,7 +76,10 @@
     }
     #descricao{
         text-align: justify;
-        max-height: 400px;
+    }
+
+    #descricao p{
+        font-size: 1rem;
     }
 
     #icones{
