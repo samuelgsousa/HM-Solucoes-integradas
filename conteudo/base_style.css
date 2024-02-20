@@ -44,101 +44,117 @@ header{margin-bottom: 8px;}
 body{
     background-color: var(--corFundo);
 }
+
+#logo_hm{
+    max-width: 90px;
+}
 /*cabeçalho*/
 /*alinhamento com mais de 600px em flexbox*/
-.header_desktop{
+
+header{
     display: flex;
-    align-items: end;
+    align-items: center;
     justify-content: space-around;
+    height: 2em;
+    padding-top: 15px;
 }
 
-.nav_desktop{
+.nav{
     display: flex;
     justify-content: space-around;
     text-align: center;
-    font-size: 1rem;
+    font-size: 1.25em;
     flex-grow: 1;
 }
 /*fim do alinhamento com mais de 600px em flexbox*/
 
 /*alinhamento com menos de 600px de tela*/
-.header_mobile{
-    display: flex;
-    align-items: end;
-    justify-content: space-between;
-}
-
-.nav_mobile{
-    display: flex; 
-    visibility: hidden;
-    position: absolute;
-    width: 100%;
-    top: 60px;
-    flex-direction: column;
-    text-align: left;
-    font-size: 18px;
-    background-color: var(--corFundo);
-    height: 0px;
-    transition: .6s;
-    overflow-y: auto;
-    z-index: 1000000000;
-} 
-
-.nav_mobile > a{
-    color: var(--corFonte);
-    border-bottom: transparent;
-}
-
-.nav_mobile > a:hover{
-    border-bottom: transparent;
-    background-color: #46464642;
-    color: var(--CorfonteSecundária);
-}
-
 
 #btn-mobile{
     display: none;
-    padding: .5rem 1rem;
-    font-size: 1rem;
-    border: none;
-    background: none;
-    cursor: pointer;
-    color: var(--corFonte);
+}
+/*tem que fazer um evento de fechar menu quando ele estiver aberto, a largura aumentar e diminuir de novo*/
+@media(max-width: 600px){
+    header{
+        justify-content: space-between;
+        height: 20%;
+    }
+
+    .nav{
+        display: flex; 
+        position: absolute;
+        width: 100%;
+        height: inherit;
+        top: 50px; /*mudar isso para tornar corretamente responsivo*/
+        flex-direction: column;
+        text-align: left;
+        font-size: 1.25em;
+        height: 0px;
+        transition: .6s;
+        overflow-y: auto;
+        background-color: var(--corFundo);
+        z-index: 10000000000000000000;
+    } 
+    
+    .nav  a{
+        color: var(--corFonte);
+        border-bottom: transparent;
+    }
+    
+    .nav a:hover{
+        border-bottom: transparent;
+        background-color: #46464642;
+        color: var(--CorfonteSecundária);
+    }
+    
+    
+    #btn-mobile{
+        display: flex;
+        padding: .5rem 1rem;
+        font-size: 1rem;
+        border: none;
+        background: none;
+        cursor: pointer;
+        color: var(--corFonte);
+    }
+    #hamburger{
+        border-top: 3px solid;
+        width: 40px;
+    }
+    
+    #hamburger::after, #hamburger::before{
+        content: '';
+        display: block;
+        width: inherit;
+        height: 3px;
+        background-color: currentColor;
+        margin-top: 10px;
+        transition: .3s;
+        position: relative;
+    }
+
+    nav.active{ /*quando nav receber a classe active em jQuery o display será flex*/
+        height: 100%;
+        visibility: visible;
+        position: absolute;
+        z-index: 1000000000000000000;
+    }
+    
+    #hamburger.active{ /*hamburger também recebe a classe active em jQuery*/
+        border-top-color: transparent;
+    }
+    
+    #hamburger.active::before{
+        transform: rotate(135deg);
+    }
+    
+    #hamburger.active::after{
+        transform: rotate(-135deg);
+        top: -12px; /*ajusta o "X" para ficar alinhado*/
+    }
+    
 }
 
-#hamburger{
-    border-top: 2px solid;
-    width: 20px;
-}
-
-#hamburger::after, #hamburger::before{
-    content: '';
-    display: block;
-    width: 20px;
-    height: 2px;
-    background-color: currentColor;
-    margin-top: 5px;
-    transition: .3s;
-    position: relative;
-}
-
-nav.active{ /*quando nav receber a classe active em jQuery o display será flex*/
-    height: 100%;
-    visibility: visible;
-}
-
-#hamburger.active{ /*hamburger também recebe a classe active em jQuery*/
-    border-top-color: transparent;
-}
-
-#hamburger.active::before{
-    transform: rotate(135deg);
-}
-
-#hamburger.active::after{
-    transform: rotate(-135deg);
-    top: -7px;
-}
 
 /*fim do alinhamento com menos de 600px de tela*/
 

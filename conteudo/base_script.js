@@ -20,7 +20,7 @@ function toggleMenu(event){
     btn.classList.toggle('active')
 } /*Configurando a função em escopo global para que ela possa ser chamada em setupEventListeners*/
 
-function redimensionar(){
+/*function redimensionar(){
         if($(window).width() <= 600){
             $('header').removeClass("header_desktop").addClass("header_mobile")
             $('nav').removeClass("nav_desktop").addClass("nav_mobile")
@@ -35,7 +35,7 @@ function redimensionar(){
         }
     
 
-}
+}*/
 window.setupEventListeners = () => {
 
     let btnMobile = document.querySelector('button#btn-mobile');
@@ -54,7 +54,7 @@ fetch("head.html")
     t.innerHTML = res
     body.prepend(t)
     window.setupEventListeners()
-    redimensionar()
+    //redimensionar()
 })
 
 /*adicionando rodapé*/
@@ -71,7 +71,7 @@ fetch("foot.html")
 
 $(document).ready(() => {
 
-    window.addEventListener("resize",redimensionar)
+    //window.addEventListener("resize",redimensionar)
     
     $('#' + $('title').text()).addClass("selectedPage") // essa linha pega o nome da página e localiza o link com o mesmo id para deixar selecionado
     
