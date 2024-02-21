@@ -33,9 +33,32 @@
 
 }
 
-p, h1, h2, h3, h4, h5{
+p{
     color: var(--corFonte);
+    font-size: clamp(1rem, 1rem + 1vw, 3rem);
 }
+
+
+h1{
+    font-size: clamp(2rem, 2rem + 2vw, 4rem);
+    color: var(--AutoColor);
+}
+
+h2{
+    font-size: clamp(2.5rem, 1rem + 2vw,3.5rem);
+    color: var(--ReverseColor);
+}
+
+h3{
+    color: var(--AutoColor);
+    font-size: clamp(1rem, 1rem + 1vw, 3.3rem);
+}
+
+strong{
+    font-size: inherit;
+    color: var(--AutoColor);
+}
+
 *{
     margin: 0px 0px 0px 0px;
 }
