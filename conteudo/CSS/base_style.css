@@ -4,6 +4,8 @@
 
 :root{
     font-family: 'Nunito';
+    font-size: 62.5%;
+    --TextoPadrao: clamp(1rem, 1rem + 1vw, 3rem);
     --FooterFontColor: white;
     --corPrincipal: #3783e0;
     --corSecundaria: #011B3A;
@@ -13,7 +15,6 @@
     --corFundo: white;
     --CorfonteSecundária: white;
     --BackgroundColorBox: #3783e0;
-
     --AutoColor: var(--corPrincipal); /*Utiliza a cor de destaque do próprio modo*/
     --ReverseColor: var(--corTerciaria); /*Utiliza a cor destaque do outro modo*/
     
@@ -27,7 +28,6 @@
     --corFundo: #1f1f1f;
     --CorfonteSecundária: black;
     --BackgroundColorBox: #ffb01f;
-
     --AutoColor: var(--corTerciaria); /*Utiliza a cor de destaque do próprio modo*/
     --ReverseColor: var(--corPrincipal); /*Utiliza a cor destaque do outro modo*/
 
@@ -38,7 +38,6 @@ p, h1, h2, h3, h4, h5{
 }
 *{
     margin: 0px 0px 0px 0px;
-    
 }
 
 a{
@@ -52,7 +51,8 @@ body{
 }
 
 #logo_hm{
-    max-width: 90px;
+    max-width: 20%;
+    height: 100%;
 }
 /*cabeçalho*/
 /*alinhamento com mais de 600px em flexbox*/
@@ -61,16 +61,16 @@ header{
     display: flex;
     align-items: center;
     justify-content: space-around;
-    height: 2em;
+    height: 4.5rem;
     padding-top: 15px;
-    margin-bottom: 2%;
+    margin-bottom: 5%;
 }
 
 .nav{
     display: flex;
     justify-content: space-around;
     text-align: center;
-    font-size: 1.2em;
+    font-size: 2.5rem;
     flex-grow: 1;
 }
 /*fim do alinhamento com mais de 600px em flexbox*/
@@ -125,7 +125,7 @@ header{
         color: var(--corFonte);
     }
     #hamburger{
-        border-top: 3px solid;
+        border-top: 2px solid;
         width: 40px;
     }
     
@@ -133,7 +133,7 @@ header{
         content: '';
         display: block;
         width: inherit;
-        height: 3px;
+        height: 2px;
         background-color: currentColor;
         margin-top: 10px;
         transition: .3s;
@@ -227,6 +227,7 @@ footer > img {
     footer{
         flex-direction: column-reverse;
         text-align: center;
+        gap: 15px;
     }
     #integracao{
         margin-right: 0px;

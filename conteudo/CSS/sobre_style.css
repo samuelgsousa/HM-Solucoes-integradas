@@ -6,20 +6,20 @@ main{
 }
 
 h1{
-    font-size: 2rem;
-    margin-bottom: 1%;
+    font-size: clamp(2rem, 2rem + 2vw, 4rem);
+    margin-bottom: 2%;
     color: var(--AutoColor);
 }
 
 h2{
-    font-size: 1.9rem;
+    font-size: clamp(2.5rem, 1rem + 2vw,3.5rem);
     margin-bottom: 2.5%;
     color: var(--ReverseColor);
 }
 
 p{
-    font-size: 1.5rem;
-    text-indent: 1em;
+    font-size: clamp(1rem, 1rem + 1vw, 3rem);
+
 }
 
 strong{
@@ -29,7 +29,7 @@ strong{
 
 #qsm{
     margin: auto;
-    width: 90%;
+    width: 70%;
 }
 
 #about{
@@ -43,14 +43,15 @@ strong{
 }
 
 #imagem{
-    width: 50%;
+    width: 70%;
     max-height: 50%;
     margin-bottom: 10px;
+    border-radius: 15px;
 }
 
 #about_text{
     text-align: justify;
-    width: 50%;
+    width: 70%;
 }
 
 #about_text p{
@@ -65,8 +66,7 @@ ul{
 
 li{
     margin-bottom: 2%;
-    font-size: 1.5rem;
-
+    font-size: clamp(1rem, 1rem + 1vw, 3rem);
 }
 
 @media (max-width:600px){

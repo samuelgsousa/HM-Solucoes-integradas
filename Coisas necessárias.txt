@@ -38,6 +38,23 @@ Câmeras
 
 -> utilizar um único arquivo para estilo e alterar as variáveis de cores pelo Javascript
 
+-> criar uma animação de transição do meio para os ladospara quando colocar o mouse em cima do menu de navegação
+
+-> lembrar de alterar o tamanho das divs de texto e icones no index. Aumentando esse tamanho
+
 900px - 1230 ()1235 sla o problema
 
 62.5% equivale a 10px
+
+
+
+<*--------------------------------------------------------------------------------------------------------------------------------*>
+Sites de referência:
+
+https://www.hsolucoes.com.br/
+
+https://www.verzani.com.br/blog/gestao-integrada-de-facilities/
+
+https://www.grupossi.com.br/
+
+http://americafacility.com/
