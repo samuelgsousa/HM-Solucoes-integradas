@@ -1,6 +1,6 @@
+
 .container{
     position: relative;
-    margin-top: 100px;
     height: 100%;
     width: 100%;
     display: block;
@@ -15,57 +15,40 @@ h1{
     text-align: center;
     font-size: clamp(2rem, 3rem + 2vw,5rem);
  }
-    .slider{ /*não interfere pois está com position abslute*/
-        margin: 0 auto;
-        width: 100%;
-        max-height: 80%;
+    .carrossel{
         overflow: hidden;
-        position: absolute;
-    }
-
-    #display{  /*ta aqui o problema*/
-        margin: 0 auto;
         width: 100%;
-        margin-bottom: 15px;
+        max-height: 80vh;
     }
-    
 
-    .slides{
-        width: 400%;
-        height: inherit;
+
+
+    .container{
         display: flex;
-        
+        transition: 0.7s ease-in-out;
+        transform: translateX(0);
     }
 
-
-    .slide{ /*é cada item*/
-        width: 25%;
-        position: relative;
-        transition: 2s;
-        padding: 0px;
-        height: inherit;
-    }
-
-    .slide img{
-        width: 100%;
+    .carrossel > .container > img{
         object-fit: cover;
-        }
-    
-    #img2 {
-        margin-top: -3%;
-        
+        min-width: 100%;
     }
 
-    #img3{
-        margin-top: -2%;
+    #img2{
+        margin-top: clamp(-20%, -15% - 15rem ,0%);
     }
+    #img3{
+        margin-top: -15%;
+    }
+
+  
 
     #img4{
-        margin-top: -2%;
-            } 
+        
+        margin-top: clamp(-10%, -15% - 15rem ,0%);
+    }
 
-    /*fim do carrossel
-    agora começa o o que fazemos*/
+    /*aqui seria o carrossel original*/
 
     #desc-group{
         display: flex;
@@ -75,7 +58,7 @@ h1{
    
     #descricao, #icones{
         margin-top: 15px;
-        width: 400px;
+        width: 40%;
         padding: 10px;
         box-sizing: border-box;
         border-radius: 10px;
@@ -84,6 +67,8 @@ h1{
         text-align: justify;
         width: 30%;
     }
+
+    
 
     #descricao p{
         font-size: 1.8rem;
@@ -111,15 +96,47 @@ h1{
     .icons > img{
         width: 64px;
         height: 64px;
-    }
-    .icons > label {
-        font-size: 12px;
-    }
-    
+    } 
    
     #icones div:last-child{
         display: none;
     }
+
+
+    @media(min-width: 1200px){
+        #desc-group{
+            justify-content: space-evenly;
+        }
+
+        #descricao, #icones{
+            width: 45%;
+            height: 60rem;
+        }
+        .icons img{
+            width: fit-content;
+            height: fit-content;
+        }
+        .icons :first-child{
+            width: inherit;
+            height: inherit;
+        }
+        .icons{
+            width: 18rem;
+            height: 18rem;
+        }
+    }
+
+    .icons label {
+        font-size: 2rem;
+        margin-top: 3%;
+        text-align: justify;
+    }
+
+    label[for='ar_condicionado']{
+        text-align: center;
+    }
+
+
 
     @media (max-width: 800px){ 
         #desc-group{
@@ -130,9 +147,6 @@ h1{
         #descricao{
             width: 90%;
             box-sizing: content-box;
-        }
-        .slider{
-            height: 60%;
         }
 
         #icones{
@@ -147,14 +161,7 @@ h1{
 
         #icones div:last-child{
             display: flex;
-        }
-
-        .slider{
-            height: 50%;
-        }
-
-       
-       
+        }   
     }
 
     @media (max-width: 400px){
@@ -171,3 +178,4 @@ h1{
         }
     }
 }
+

@@ -42,6 +42,8 @@ Câmeras
 
 -> lembrar de alterar o tamanho das divs de texto e icones no index. Aumentando esse tamanho
 
+-> Alterar o número do whatsapp e o email tanto do footer quanto da página de orçamento
+
 900px - 1230 ()1235 sla o problema
 
 62.5% equivale a 10px
@@ -58,3 +60,54 @@ https://www.verzani.com.br/blog/gestao-integrada-de-facilities/
 https://www.grupossi.com.br/
 
 http://americafacility.com/
+
+CARROSSEL CSS ORIGINAL:
+
+.slider{ /*não interfere pois está com position abslute*/
+        margin: 0 auto;
+        width: 100%;
+        max-height: 80%;
+        overflow: hidden;
+        position: absolute;
+    }
+
+    #display{  /*ta aqui o problema*/
+        margin: 0 auto;
+        width: 100%;
+        margin-bottom: 15px;
+    }
+    
+
+    .slides{
+        width: 400%;
+        height: inherit;
+        display: flex;
+        
+    }
+
+
+    .slide{ /*é cada item*/
+        width: 25%;
+        position: relative;
+        transition: 2s;
+        padding: 0px;
+        height: inherit;
+    }
+
+    .slide img{
+        width: 100%;
+        object-fit: cover;
+        }
+    
+    #img2 {
+        margin-top: -3%;
+        
+    }
+
+    #img3{
+        margin-top: -2%;
+    }
+
+    #img4{
+        margin-top: -2%;
+            } 
