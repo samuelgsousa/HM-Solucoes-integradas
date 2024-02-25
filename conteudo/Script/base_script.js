@@ -29,7 +29,7 @@ window.setupEventListeners = () => {
 
 /*adicionando cabeçalho */
 const t = document.createElement('header')
-t.setAttribute("class", "header_desktop")
+t.setAttribute("class", "header")
 const body = document.body
 
 fetch("head.html")

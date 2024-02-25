@@ -17,6 +17,7 @@
     --BackgroundColorBox: #3783e0;
     --AutoColor: var(--corPrincipal); /*Utiliza a cor de destaque do próprio modo*/
     --ReverseColor: var(--corTerciaria); /*Utiliza a cor destaque do outro modo*/
+    --UnderLine: #1b385c;
     
 }
 
@@ -30,7 +31,7 @@
     --BackgroundColorBox: #ffb01f;
     --AutoColor: var(--corTerciaria); /*Utiliza a cor de destaque do próprio modo*/
     --ReverseColor: var(--corPrincipal); /*Utiliza a cor destaque do outro modo*/
-
+    --UnderLine: #bdbdbd;
 }
 
 p{
@@ -76,6 +77,7 @@ body{
 #logo_hm{
     max-width: 20%;
     height: 100%;
+    z-index: 100;
 }
 /*cabeçalho*/
 /*alinhamento com mais de 600px em flexbox*/
@@ -94,14 +96,56 @@ header{
     justify-content: space-around;
     text-align: center;
     font-size: 2.5rem;
+    font-weight: bold;
     flex-grow: 1;
 }
+
+nav a{
+    text-decoration: none;
+    color: var(--AutoColor);
+    width: 100%;
+    border-bottom: 3px solid transparent;
+    animation: none;
+    position: relative;
+}
+
+nav a::after{
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    height: 2px;
+    width: 100%;
+    left: 0px;
+    background-image: linear-gradient(to right, transparent 10%, var(--UnderLine) 40%, var(--UnderLine) 60%, transparent 90%);
+    transition: 0.2s;
+    transition-timing-function: ease-in-out;
+    transform: scale(0);
+}
+
+nav a:hover::after{
+    transform: scale(1);
+
+}
+
+nav a:hover{
+    color: var(--ReverseColor);
+}
+
+/* nav > a:hover{
+    border-bottom: 3px solid var(--corPrincipal);
+    border-image: linear-gradient(to right, transparent 10%, var(--ReverseColor) 50%, transparent 90%) 1;
+    color: var(--ReverseColor);
+    transition: 0.2s ease-in-out;
+} */
+
+
 /*fim do alinhamento com mais de 600px em flexbox*/
 
 /*alinhamento com menos de 600px de tela*/
 
 #btn-mobile{
     display: none;
+    
 }
 /*tem que fazer um evento de fechar menu quando ele estiver aberto, a largura aumentar e diminuir de novo*/
 @media(max-width: 600px){
@@ -111,33 +155,35 @@ header{
     }
 
     .nav{
+        padding-top: 10%;
         display: flex; 
         position: absolute;
         width: 100%;
-        height: inherit;
+        justify-content: start;
         top: 50px; /*mudar isso para tornar corretamente responsivo*/
         flex-direction: column;
         text-align: left;
-        font-size: 1.25em;
         height: 0px;
-        transition: .6s;
+         transition: .6s;
         overflow-y: auto;
         background-color: var(--corFundo);
-        z-index: 10000000000000000000;
+        z-index: 10;
+        gap: 3%;
     } 
     
-    .nav  a{
-        color: var(--corFonte);
-        border-bottom: transparent;
+    .nav a{
+        color: var(--ReverseColor);
+        color: var(--corPrincipal);
+        text-align: center;
+        padding-bottom: 0.5rem;
+
+    }
+
+    nav a::after{
+        transform: none;
     }
     
-    .nav a:hover{
-        border-bottom: transparent;
-        background-color: #46464642;
-        color: var(--CorfonteSecundária);
-    }
-    
-    
+
     #btn-mobile{
         display: flex;
         padding: .5rem 1rem;
@@ -146,6 +192,8 @@ header{
         background: none;
         cursor: pointer;
         color: var(--corFonte);
+        z-index: 100;
+
     }
     #hamburger{
         border-top: 2px solid;
@@ -167,7 +215,7 @@ header{
         height: 100%;
         visibility: visible;
         position: absolute;
-        z-index: 1000000000000000000;
+        z-index: 10;
     }
     
     #hamburger.active{ /*hamburger também recebe a classe active em jQuery*/
@@ -188,17 +236,8 @@ header{
 
 /*fim do alinhamento com menos de 600px de tela*/
 
-nav > a{
-    text-decoration: none;
-    color: var(--AutoColor);
-    width: 100%;
-    border-bottom: 3px solid transparent;
-}
 
-nav > a:hover{
-    border-bottom: 3px solid var(--corPrincipal);
-    color: var(--corPrincipal);
-}
+
 
 .selectedPage{
     border-bottom: 3px solid var(--corPrincipal);
