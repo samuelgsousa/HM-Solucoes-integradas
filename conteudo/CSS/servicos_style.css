@@ -4,21 +4,23 @@ h1{
     margin-bottom: 5%;
 }
 .carrossel{
-    overflow: hidden;
-    width: 60%;
-    max-height: 60vh;
     margin: auto;
+    margin-bottom: 5%;
+    overflow: hidden;
+    width: 70%;
+    max-height: 70vh;
     border-radius: 15px;
 }
 
 .radio-group{
     position: absolute;
     z-index: 100; 
-    width: 60%;
+    width: 70%;
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    gap: 5rem;
+    gap: clamp(3rem, 2rem + 2vw,5rem);
+    z-index: 9;
 }
 
 input[type='radio']{
@@ -27,14 +29,17 @@ input[type='radio']{
 
 .custom-radio{
     content: '';
-    display: inline-block;
-    width: 18px;
-    height: 18px;
+    display: flex;
+    width: 2rem;
+    height: 2rem;
     border-radius: 50%;
     border: 2px solid white;
     position: relative;
     cursor: pointer;
     margin-bottom: 5%;
+    align-items: center;
+    justify-content: center;
+    
 }
 .custom-radio::after{
     content: '';
@@ -44,15 +49,11 @@ input[type='radio']{
 
 input[type='radio']:checked + .custom-radio::after{
     content: '';
-    background-color: white;
+    background-color:white;
     width: 80%;
     height: 80%;
     border-radius: 50%;
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    display: block;
     transition: 0.3s width, 0.3s height;
 }
 

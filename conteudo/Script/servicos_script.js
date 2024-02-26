@@ -20,16 +20,17 @@ $(`#C1R${cont + 1}`).prop("checked", true)
 
 }
 
-$('input[name="radioC1"]').click( () => { 
-    var teste = $('input[name="radioC1"]:checked').val()
-    box.style.transform = `translateX(${(-teste + 1) * 100}%)`
-    cont = teste - 1
+$('input[name="radioC1"]').click( () => {
+    var radioVal = $('input[name="radioC1"]:checked').val()
+    box.style.transform = `translateX(${(-radioVal + 1) * 100}%)`
+    cont = radioVal - 1 //quando um radio button for clicado, a variável radioVal irá pegar o valor dessa radio e usar o translate para mudar o slide para a foto correspondente. O contador irá receber o mesmo valor - 1 para que siga para a próxima foto
+
     clearInterval(timer)
+    timer = setInterval(() => nextImage(), 4500) //clear interval para o contator e setInterval inicia de novo. Isso faz com que ele seja reiniciado sempre que o usuário clicar para voltar para algum slide
+   
 })
 
- let timer = setInterval(function(){
-   nextImage()
-  }, 4500)
+ //let timer = setInterval(() => nextImage(), 4500)
 
-  //colcoar alguma forma de quando a pessoa clicar na foto, aumentar o tamanho dela e parar o carrossel até ela fechar a imagem
-  //colocar algo para quando o usuário clicar no radio, resetar a contagem do setInterval
+  //colocar alguma forma de quando a pessoa clicar na foto, aumentar o tamanho dela e parar o carrossel até ela fechar a imagem
+  //corrigir la no css a bolinha do radio que está levemente torta
