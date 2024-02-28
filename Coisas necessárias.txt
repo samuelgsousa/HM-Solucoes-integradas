@@ -44,10 +44,75 @@ Câmeras
 
 -> Alterar o número do whatsapp e o email tanto do footer quanto da página de orçamento
 
+->Mexer o fetch para caso não consiga carregar o cabeçalho ou rodapé a página dar erro
+
 900px - 1230 ()1235 sla o problema
 
 62.5% equivale a 10px
 
+const box = Array.from(document.querySelectorAll('.container')) //array com todos os containers
+const imagens = document.querySelectorAll(".container img") //array com todas as imagens dentro do container. É possível saber qual o elemento pai, talvez isso ajude
+let cont = 0
+
+let radioG = $('.radio-group')
+radioG.each((Element) => {
+    Element.onClick
+})
+
+// $('input[type="radio"]').click( () => {
+//     let radioSelected = $('input[type="radio"]:checked')
+//     let radioVal = radioSelected.val()
+//     let radioId = radioSelected.attr('id')
+//     alert(radioId)
+    
+
+//     let radioParent = radioSelected.closest('div').attr('id')
+//     //let container = $('input[type="radio"]:checked').siblings()
+    
+//     box[0].style.transform = `translateX(${(-radioVal + 1) * 100}%)`
+//     cont = radioVal - 1 
+//     //quando um radio button for clicado, a variável radioVal irá pegar o valor dessa radio e usar o translate para mudar o slide para a foto correspondente. O contador irá receber o mesmo valor - 1 para que siga para a próxima foto
+
+//     clearInterval(timer)
+//     timer = setInterval(() => nextImage(), 4500) 
+//     //clear interval para o contator e setInterval inicia de novo. Isso faz com que ele seja reiniciado sempre que o usuário clicar para voltar para algum slide
+   
+// })
+
+
+// const box = document.querySelector(".container")
+// const imagens = document.querySelectorAll(".container img")
+
+// let cont = 0
+
+// function nextImage(){
+
+// cont++
+
+// if(cont > imagens.length - 1) cont = 0
+
+// box.style.transform = `translateX(${-cont * 100}%)`
+
+// $(`#C1R${cont + 1}`).prop("checked", true)
+
+// }
+
+ //let timer = setInterval(() => nextImage(), 4500)
+
+  //colocar alguma forma de quando a pessoa clicar na foto, aumentar o tamanho dela e parar o carrossel até ela fechar a imagem
+  //corrigir la no css a bolinha do radio que está levemente torta
+
+//   $('input[name="radioC1"]').click( () => {
+//     var radioVal = $('input[name="radioC1"]:checked').val()
+//     box.style.transform = `translateX(${(-radioVal + 1) * 100}%)`
+//     cont = radioVal - 1 
+//     //quando um radio button for clicado, a variável radioVal irá pegar o valor dessa radio e usar o translate para mudar o slide para a foto correspondente. O contador irá receber o mesmo valor - 1 para que siga para a próxima foto
+
+//     clearInterval(timer)
+//     timer = setInterval(() => nextImage(), 4500) 
+//     //clear interval para o contator e setInterval inicia de novo. Isso faz com que ele seja reiniciado sempre que o usuário clicar para voltar para algum slide
+   
+// })
 
 
 <*--------------------------------------------------------------------------------------------------------------------------------*>
