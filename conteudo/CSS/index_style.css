@@ -16,6 +16,82 @@ h1{
     font-size: clamp(2rem, 3rem + 2vw,5rem);
     margin-top: 3rem;
  }
+
+ #banner{
+    position: absolute;
+    z-index: 9;
+    width: 100%;
+    /*altura está sendo inserida dinamicamente com o javascript*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    gap: 5%;
+ }
+ 
+
+ #banner p{
+    font-size: clamp(2rem, 2rem + 2vw, 5rem);
+    text-align: center;
+    color: var(--FooterFontColor);
+ }
+
+.carrossel a{
+    width: 20%;
+    height: 10%;
+    text-decoration: none;
+}
+
+ #banner a button{
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    border-width: 3px;
+    border-color: var(--BorderButton);
+    font-size: clamp(0.5rem, 1rem + 1vw, 2rem);
+    background-color: var(--ReverseColor);
+    color: var(--FooterFontColor);
+    font-weight: 600;
+    padding-left: 2%;
+    padding-right: 2%;
+    cursor: pointer;
+ }
+
+
+ @media (max-width: 1020px){
+    .carrossel a{
+        width: 25%;
+        height: 10%;
+        }
+
+ }
+
+ @media (max-width: 680px){
+    .carrossel a{
+        width: 35%;
+        height: 12%;
+        }
+
+        #banner{
+            gap: 10%
+        }
+ }
+
+ @media (max-width: 500px){
+    .carrossel a{
+    width: 40%;
+    height: 15%;
+    }
+}
+
+@media (max-width: 375px){
+    .carrossel a{
+    width: 45%;
+    height: 20%;
+    }
+}
+
     .carrossel{
         overflow: hidden;
         width: 100%;
@@ -89,7 +165,6 @@ h1{
         display: flex;
         flex-direction: column;
         align-items: center;
-        
     }
 
     .icons > img{
@@ -101,52 +176,34 @@ h1{
         display: none;
     }
 
-
-    @media(min-width: 1200px){
-        #desc-group{
-            justify-content: space-evenly;
-        }
-
-        #descricao, #icones{
-            width: 45%;
-            height: 60rem;
-        }
-        .icons img{
-            width: fit-content;
-            height: fit-content;
-        }
-        .icons :first-child{
-            width: inherit;
-            height: inherit;
-        }
-        .icons{
-            width: clamp(14rem, 1rem + 1vw,18rem);
-            height: clamp(14rem, 1rem + 1vw,18rem);
-        }
-
+    @media (800px < width <960px){
         #icones div:last-child{
             display: flex;
-        }
+        }   
     }
+
+
+
+    @media(min-width: 1200px){
+        #icones{
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            justify-items: center;
+        }
+
+      
+    }
+
+
 
     .icons label {
-        font-size: 2.2rem;
+        font-size: 1.5rem;
         font-weight: bolder;   
-        margin-top: 3%;
-        text-align: justify;
+        margin-top: 10%;
+        text-align: center;
     }
 
-    label[for='ar_condicionado']{
-        text-align: center;
-        width: 200%;
-    }
-    label[for='ac']{
-        font-size: 1.7rem;
-        text-align: center;
-        width: 280%;
-        font-weight: bold;
-        margin-top: -2%;  
-    }
+   
 
 
 
@@ -169,7 +226,7 @@ h1{
             justify-content: center;
         }
         
-    @media (max-width: 600px){ /*com pouco menos de 800px ainda ta bugando*/
+    @media (max-width: 599px){ /*com pouco menos de 800px ainda ta bugando*/
 
         #icones div:last-child{
             display: flex;

@@ -25,20 +25,20 @@ Pintura
 Controle de acesso
 Câmeras
 
--> diminuir o tamanho do header e footer. Provavelmente será necessário diminuir tamanho de fontes no geral
--> separar os arquivos HTML, CSS e Javascript em pastas diferentes
+-> diminuir o tamanho do header e footer. Provavelmente será necessário diminuir tamanho de fontes no geral - FEITO
+-> separar os arquivos HTML, CSS e Javascript em pastas diferentes - FEITO		
 
--> usar REM e EM para fonte (existe pixel to Em e REm converter)
+-> usar REM e EM para fonte (existe pixel to Em e REm converter) - FEITO
 
 -> ****DIMENSÕES IPHONE SE (menor existente): 375 X 667 
 
--> tornar a div dos ícones mais ajustável em telas maiores, aumentando de tamanho
+-> tornar a div dos ícones mais ajustável em telas maiores, aumentando de tamanho 
 
 -> fazer com que os ícones também aumentem e diminuam de tamanho de acordo com a tela
 
--> utilizar um único arquivo para estilo e alterar as variáveis de cores pelo Javascript
+-> utilizar um único arquivo para estilo e alterar as variáveis de cores pelo Javascript - FEITO
 
--> criar uma animação de transição do meio para os ladospara quando colocar o mouse em cima do menu de navegação
+-> criar uma animação de transição do meio para os lados para quando colocar o mouse em cima do menu de navegação - FEITO
 
 -> lembrar de alterar o tamanho das divs de texto e icones no index. Aumentando esse tamanho
 
@@ -46,133 +46,21 @@ Câmeras
 
 ->Mexer o fetch para caso não consiga carregar o cabeçalho ou rodapé a página dar erro
 
+->Corrigir o problema do radio button em telas menores, onde a bolinha fica desalinhada - FEITO (por enquanto)
+
 900px - 1230 ()1235 sla o problema
 
 62.5% equivale a 10px
 
-const box = Array.from(document.querySelectorAll('.container')) //array com todos os containers
-const imagens = document.querySelectorAll(".container img") //array com todas as imagens dentro do container. É possível saber qual o elemento pai, talvez isso ajude
-let cont = 0
+-> Fornecedores:
 
-let radioG = $('.radio-group')
-radioG.each((Element) => {
-    Element.onClick
-})
-
-// $('input[type="radio"]').click( () => {
-//     let radioSelected = $('input[type="radio"]:checked')
-//     let radioVal = radioSelected.val()
-//     let radioId = radioSelected.attr('id')
-//     alert(radioId)
-    
-
-//     let radioParent = radioSelected.closest('div').attr('id')
-//     //let container = $('input[type="radio"]:checked').siblings()
-    
-//     box[0].style.transform = `translateX(${(-radioVal + 1) * 100}%)`
-//     cont = radioVal - 1 
-//     //quando um radio button for clicado, a variável radioVal irá pegar o valor dessa radio e usar o translate para mudar o slide para a foto correspondente. O contador irá receber o mesmo valor - 1 para que siga para a próxima foto
-
-//     clearInterval(timer)
-//     timer = setInterval(() => nextImage(), 4500) 
-//     //clear interval para o contator e setInterval inicia de novo. Isso faz com que ele seja reiniciado sempre que o usuário clicar para voltar para algum slide
-   
-// })
-
-
-// const box = document.querySelector(".container")
-// const imagens = document.querySelectorAll(".container img")
-
-// let cont = 0
-
-// function nextImage(){
-
-// cont++
-
-// if(cont > imagens.length - 1) cont = 0
-
-// box.style.transform = `translateX(${-cont * 100}%)`
-
-// $(`#C1R${cont + 1}`).prop("checked", true)
-
-// }
-
- //let timer = setInterval(() => nextImage(), 4500)
-
-  //colocar alguma forma de quando a pessoa clicar na foto, aumentar o tamanho dela e parar o carrossel até ela fechar a imagem
-  //corrigir la no css a bolinha do radio que está levemente torta
-
-//   $('input[name="radioC1"]').click( () => {
-//     var radioVal = $('input[name="radioC1"]:checked').val()
-//     box.style.transform = `translateX(${(-radioVal + 1) * 100}%)`
-//     cont = radioVal - 1 
-//     //quando um radio button for clicado, a variável radioVal irá pegar o valor dessa radio e usar o translate para mudar o slide para a foto correspondente. O contador irá receber o mesmo valor - 1 para que siga para a próxima foto
-
-//     clearInterval(timer)
-//     timer = setInterval(() => nextImage(), 4500) 
-//     //clear interval para o contator e setInterval inicia de novo. Isso faz com que ele seja reiniciado sempre que o usuário clicar para voltar para algum slide
-   
-// })
-
-
-<*--------------------------------------------------------------------------------------------------------------------------------*>
-Sites de referência:
-
-https://www.hsolucoes.com.br/
-
-https://www.verzani.com.br/blog/gestao-integrada-de-facilities/
-
-https://www.grupossi.com.br/
-
-http://americafacility.com/
-
-CARROSSEL CSS ORIGINAL:
-
-.slider{ /*não interfere pois está com position abslute*/
-        margin: 0 auto;
-        width: 100%;
-        max-height: 80%;
-        overflow: hidden;
-        position: absolute;
-    }
-
-    #display{  /*ta aqui o problema*/
-        margin: 0 auto;
-        width: 100%;
-        margin-bottom: 15px;
-    }
-    
-
-    .slides{
-        width: 400%;
-        height: inherit;
-        display: flex;
-        
-    }
-
-
-    .slide{ /*é cada item*/
-        width: 25%;
-        position: relative;
-        transition: 2s;
-        padding: 0px;
-        height: inherit;
-    }
-
-    .slide img{
-        width: 100%;
-        object-fit: cover;
-        }
-    
-    #img2 {
-        margin-top: -3%;
-        
-    }
-
-    #img3{
-        margin-top: -2%;
-    }
-
-    #img4{
-        margin-top: -2%;
-            } 
+Distriar
+Frigelar
+Satis
+Disparcon
+Bluear
+Santil
+Andra
+Leroy Merlin
+Nicom
+Voicedata

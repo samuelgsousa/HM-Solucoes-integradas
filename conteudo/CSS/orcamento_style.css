@@ -4,6 +4,10 @@ main{
     padding: 0 5%;
 }
 
+a{
+    text-decoration: none;
+}
+
 h1, h2, h3{
     margin-bottom: 2%;
     margin-top: 2%;;
@@ -37,6 +41,7 @@ main button{
     border-color: var(--ReverseColor);
     background-color: var(--corFundo);
     border-width: 5px;  
+    border-style: solid;
 }
 
 main button:hover{

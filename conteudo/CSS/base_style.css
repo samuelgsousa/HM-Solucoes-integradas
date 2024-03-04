@@ -10,14 +10,15 @@
     --corPrincipal: #3783e0;
     --corSecundaria: #011B3A;
     --corTerciaria: #FFA400;
-    --FooterFontColor: white;
     --corFonte: rgb(0, 0, 0);
-    --corFundo: white;
+    --corFundo: rgb(250, 250, 250);
     --CorfonteSecundária: white;
     --BackgroundColorBox: #3783e0;
     --AutoColor: var(--corPrincipal); /*Utiliza a cor de destaque do próprio modo*/
     --ReverseColor: var(--corTerciaria); /*Utiliza a cor destaque do outro modo*/
     --UnderLine: #1b385c;
+    --Fornecedores:var(--corSecundaria);
+    --BorderButton: #f1b036;
     
 }
 
@@ -26,12 +27,14 @@
     --corSecundaria: #011B3A;
     --corTerciaria: #FFA400;
     --corFonte: white;
-    --corFundo: #1f1f1f;
+    --corFundo: #161616;
     --CorfonteSecundária: black;
     --BackgroundColorBox: #ffb01f;
     --AutoColor: var(--corTerciaria); /*Utiliza a cor de destaque do próprio modo*/
     --ReverseColor: var(--corPrincipal); /*Utiliza a cor destaque do outro modo*/
     --UnderLine: #bdbdbd;
+    --Fornecedores: #3783e0;
+    --BorderButton: #266ec5;
 }
 
 p{
@@ -75,8 +78,10 @@ body{
 }
 
 #logo_hm{
-    max-width: 20%;
-    height: 100%;
+    width: 150px;
+    height: 80px;
+    box-sizing: content-box;
+    margin-left: 5px;
     z-index: 100;
 }
 /*cabeçalho*/
@@ -149,6 +154,11 @@ nav a:hover{
 }
 /*tem que fazer um evento de fechar menu quando ele estiver aberto, a largura aumentar e diminuir de novo*/
 @media(max-width: 600px){
+
+    #logo_hm{
+        margin-top: -10px;
+    }
+
     header{
         justify-content: space-between;
         height: 20%;
@@ -160,11 +170,11 @@ nav a:hover{
         position: absolute;
         width: 100%;
         justify-content: start;
-        top: 50px; /*mudar isso para tornar corretamente responsivo*/
+        top: 1.5rem; /*mudar isso para tornar corretamente responsivo*/
         flex-direction: column;
         text-align: left;
         height: 0px;
-         transition: .6s;
+        transition: .6s;
         overflow-y: auto;
         background-color: var(--corFundo);
         z-index: 10;
@@ -258,13 +268,13 @@ footer{
 
 footer p{
     color: var(--FooterFontColor);
-    font-size: 1rem;
+    font-size: 1.8rem;
 
 }
 
-footer > img {
-    max-height: 50px;
-    margin-left: 1px;
+#logo-inferior{
+    height: 55px;
+    margin-left: 5px;
     margin-top:10px;
     
 }
@@ -285,7 +295,7 @@ footer > img {
     max-height: 35px;
 }
 
-@media (max-width: 400px){
+@media (max-width: 460px){
     footer{
         flex-direction: column-reverse;
         text-align: center;
@@ -294,5 +304,9 @@ footer > img {
     #integracao{
         margin-right: 0px;
         margin-top: 10px;
+    }
+
+    #logo-inferior{
+        margin-left: 0px;
     }
 }

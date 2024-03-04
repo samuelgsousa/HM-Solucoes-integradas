@@ -27,6 +27,14 @@ window.setupEventListeners = () => {
     btnMobile.addEventListener('touchstart', toggleMenu);
 }
 
+//adicionando flaticon
+const flaticon = document.createElement('link')
+flaticon.setAttribute("rel", "shortcut icon")
+flaticon.setAttribute("href", "../../logo/HM_clean_cropped.png")
+flaticon.setAttribute("type", "image/x-icon")
+document.head.append(flaticon)
+
+
 /*adicionando cabeçalho */
 const t = document.createElement('header')
 t.setAttribute("class", "header")
@@ -40,6 +48,7 @@ fetch("head.html")
     window.setupEventListeners()
     //redimensionar()
 })
+
 
 /*adicionando rodapé*/
 
@@ -57,12 +66,8 @@ $(document).ready(() => {
 
     //window.addEventListener("resize",redimensionar)
     
-    $('#' + $('title').text()).addClass("selectedPage") // essa linha pega o nome da página e localiza o link com o mesmo id para deixar selecionado
-    
-    $('nav > a').mouseover(() =>  $('nav > a').removeClass("selectedPage")) // remove a classe de todos os links quando o mouse está em cima de algum, porém, como existe a classe hover no CSS, o link em que ele estiver com o Mouse em cima irá ficar destacado
-    
-    $('nav > a').mouseout(() => $('#' + $('title').text()).addClass("selectedPage")) //quando o usuário tirar o mouse do link irá localizar o link cujo o id seja igual o nome da página
-    
+   
+
 
     
 

@@ -6,7 +6,6 @@ radioAdjust()
 
 const rad = Array.from(document.querySelectorAll('input[type="radio"]')) 
 const AllCarrossel = Array.from(document.querySelectorAll('.container')) 
-const imagens = document.querySelectorAll(".container img") //array com todas as imagens dentro dos container. É possível 
 
 rad.forEach(function(transicao){
   transicao.addEventListener("click", function(){
@@ -41,11 +40,13 @@ const nextImage = (container, valor) => {
      timer[i] = setInterval(() => {
       nextImage(AllCarrossel[i], contadorIndividual[i])
 
-      if(contadorIndividual[i]>=3) contadorIndividual[i] = 0
+      let AllContainerImg = AllCarrossel[i].querySelectorAll('img')
+
+      if(contadorIndividual[i]>=AllContainerImg.length) contadorIndividual[i] = 0
       contadorIndividual[i]++
      }, Tempo)
    }
-   //NECESSÁRIO ALTERAR O NÚEMRO 3 PARA ALGUM ARRAY OU VARIÁVEL QUE RETORNE A QUANTIDADE DE IMAGENS DE CADA CONTAINER. POSSÍVELMENTE EM JQUERY É POSSÍVEL SEM USAR UM MONTE DE ARRAY E VARIÁVEL
+   
    
       for(let i = 0; i <= AllCarrossel.length; i++) timerGeral(i, 4500), contadorIndividual[i] = 1
       
