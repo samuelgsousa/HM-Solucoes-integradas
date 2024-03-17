@@ -57,14 +57,5 @@ fetch("foot.html")
     body.append(r)
 } )
 
-$(document).ready(function() {
-     logo = document.querySelector('img#logo_hm');
-     doc = document.body
-    doc.logo.src = '../../logo/hm-clean-logo-darkmode.svg';
-    //não funciona pois a imagem não está no mesmo documento html que o site, e sim no header
-//logo.setAttribute('src', '../../logo/hm-clean-logo-darkmode.svg')
-
-})
-
 
 
