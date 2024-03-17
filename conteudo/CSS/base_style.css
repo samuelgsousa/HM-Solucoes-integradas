@@ -78,9 +78,9 @@ body{
 }
 
 #logo_hm{
-    width: 150px;
-    height: 80px;
-    box-sizing: content-box;
+    width: clamp(10rem, 8rem + 8vw ,15rem); /*10rem*/
+    height:clamp(5rem,3.5rem + 3.5vw,7rem) ; /*5rem*/
+    box-sizing: border-box;
     margin-left: 5px;
     z-index: 100;
 }
@@ -103,6 +103,11 @@ header{
     font-size: 2.5rem;
     font-weight: bold;
     flex-grow: 1;
+    margin-left: clamp(0%, -2.5% - 2.5vw,-5%);
+}
+
+.nav :first-child{
+    margin-right: -5%;
 }
 
 nav a{
@@ -136,13 +141,6 @@ nav a:hover{
     color: var(--ReverseColor);
 }
 
-/* nav > a:hover{
-    border-bottom: 3px solid var(--corPrincipal);
-    border-image: linear-gradient(to right, transparent 10%, var(--ReverseColor) 50%, transparent 90%) 1;
-    color: var(--ReverseColor);
-    transition: 0.2s ease-in-out;
-} */
-
 
 /*fim do alinhamento com mais de 600px em flexbox*/
 
@@ -153,7 +151,7 @@ nav a:hover{
     
 }
 /*tem que fazer um evento de fechar menu quando ele estiver aberto, a largura aumentar e diminuir de novo*/
-@media(max-width: 600px){
+@media(max-width: 850px){
 
     #logo_hm{
         margin-top: -10px;

@@ -14,9 +14,7 @@
     box.style.transform = `translateX(${-cont * 100}%)`
  }
 
-
- 
-
   setInterval(function(){
      nextImage()
  }, 4500)
+

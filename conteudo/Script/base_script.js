@@ -1,14 +1,13 @@
 //script base para o header
 
 
-let tema = window.matchMedia('(prefers-color-scheme: dark)').matches ? $('html').addClass('dark-mode') : $('html').removeClass('dark-mode')
+let tema = window.matchMedia('(prefers-color-scheme: dark)').matches ? ($('html').addClass('dark-mode')): $('html').removeClass('dark-mode')
 //essa sintaxe detecta se o usuário utiliza o modo escuro, caso positivo o estilo base da página mudará. Se não, ele irá inicidar com o estilo base padrão, apenas para garantir que não ocorram erros
 
 
 
 
 function toggleMenu(event){
-    if(event.type === 'touchstart') event.preventDefault() /*essa linha serve para previnir o evento click de ocorrer caso o touchstart ocorra, pois o touchstart gera um click com atraso de alguns milisegundos*/
     const nav = document.querySelector('nav')
     nav.classList.toggle('active'); //toggle significa adicione caso não tenha, remova caso tenha
     /*acessibilidade*/
@@ -21,10 +20,8 @@ function toggleMenu(event){
 } /*Configurando a função em escopo global para que ela possa ser chamada em setupEventListeners*/
 
 window.setupEventListeners = () => {
-
     let btnMobile = document.querySelector('button#btn-mobile');
     btnMobile.addEventListener('click', toggleMenu);
-    btnMobile.addEventListener('touchstart', toggleMenu);
 }
 
 //adicionando flaticon
@@ -46,7 +43,6 @@ fetch("head.html")
     t.innerHTML = res
     body.prepend(t)
     window.setupEventListeners()
-    //redimensionar()
 })
 
 
@@ -61,19 +57,14 @@ fetch("foot.html")
     body.append(r)
 } )
 
+$(document).ready(function() {
+     logo = document.querySelector('img#logo_hm');
+     doc = document.body
+    doc.logo.src = '../../logo/hm-clean-logo-darkmode.svg';
+    //não funciona pois a imagem não está no mesmo documento html que o site, e sim no header
+//logo.setAttribute('src', '../../logo/hm-clean-logo-darkmode.svg')
 
-$(document).ready(() => {
-
-    //window.addEventListener("resize",redimensionar)
-    
-   
-
-
-    
-
-    
-});
-
+})
 
 
 
