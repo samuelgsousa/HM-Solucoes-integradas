@@ -1,11 +1,17 @@
 //script base para o header
 
+// window.matchMedia('(prefers-color-scheme: dark)').matches ? ($('img#logo_hm').attr( "../../logo/HM_clean_logo_darkMode2.svg")) : console.log("")
 
-let tema = window.matchMedia('(prefers-color-scheme: dark)').matches ? ($('html').addClass('dark-mode')): $('html').removeClass('dark-mode')
+// window.matchMedia('(prefers-color-scheme: dark)').matches ? ($('html').addClass('dark-mode')) : $('html').removeClass('dark-mode')
+
+
+
 //essa sintaxe detecta se o usuário utiliza o modo escuro, caso positivo o estilo base da página mudará. Se não, ele irá inicidar com o estilo base padrão, apenas para garantir que não ocorram erros
 
 
+const logo = () =>{
 
+}
 
 function toggleMenu(event){
     const nav = document.querySelector('nav')
@@ -43,7 +49,24 @@ fetch("head.html")
     t.innerHTML = res
     body.prepend(t)
     window.setupEventListeners()
-})
+}).then( () => {
+    const pref = window.matchMedia('(prefers-color-scheme: dark)').matches
+    console.log(pref)
+
+        
+if(pref == true){ 
+    console.log("rolou")
+    $('html').addClass('dark-mode')
+    $('#logo_hm').attr('src', '../../logo/hm-clean-logo-darkmode.svg')
+    
+} else {
+    $('html').removeClass('dark-mode')
+    $('#logo_hm').attr('src', '../../logo/hm-clean-logo.svg')
+}
+
+}
+
+)
 
 
 /*adicionando rodapé*/

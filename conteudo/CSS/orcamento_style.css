@@ -35,7 +35,7 @@ main button{
     cursor: pointer;
     margin-top: 3rem;
     width: clamp(20rem, 15rem + 20vw ,50rem);
-    height: clamp(3rem, 2.5rem + 2.5vw ,5rem);
+    height: 5rem;
     border-radius: 25px;
     color: var(--ReverseColor);
     border-color: var(--ReverseColor);
